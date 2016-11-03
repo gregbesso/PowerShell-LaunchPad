@@ -53,14 +53,13 @@ Add-Type -AssemblyName System.Drawing
 $global:lpTitle = "PowerShell Tools Launch Pad"
 
 # the UNC path to the network-stored image file to display in the launch pad...
-$global:lpLogoURL = "\\Gbesso-w12r2\share\Style\Powershell-Logo-01.png"
+$global:lpLogoURL = "\\server\share\PowerShell\Style\your_logo_page.png" #Powershell-Logo-01.png or your_logo_page.png
 
 # folder where you store the scripts you want to be included in the launch pad drop-down menu...
-$global:lpLaunchFiles = '\\Gbesso-w12r2\share\PowerShellScripts'
+$global:lpLaunchFiles = '\\server\share\PowerShell\PowerShell-LaunchPad\Scripts'
 
-# link to an imports file that contains any functions that are reusable or
-# referenced by your PowerShell tools that the launch pad links to...
-. "\\Gbesso-w12r2\share\PowerShell-Imports\PowerShell-Imports.ps1" 
+# link to an imports file that contains any functions that are reusable / referenced by your PowerShell tools that the launch pad links to...
+. "\\server\share\PowerShell\PowerShell-Imports\PowerShell-Imports.ps1" 
 
 # setting padding between objects in the form...
 $global:lpPaddingH = 30
@@ -100,9 +99,8 @@ function New-LaunchPadStartForm() {
 .SYNOPSIS 
 Brings up the GUI form for the launch pad script.
 .DESCRIPTION 
-The launch pad is just a front door or welcome mat to your library of scripts. 
-An easy to use single point of entry to let someone bring up whatever tool is 
-needed at that moment.
+The launch pad is just a front door or welcome mat to your library of scripts. An easy to use single point of entry to let someone bring up 
+whatever tool is needed at that moment.
 .EXAMPLE 
 New-LaunchPadStartForm
 #>
